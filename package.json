@@ -11,7 +11,8 @@
     "url": "git+https://github.com/isimyi/frontend-project-lvl1.git"
   },
   "bin": {
-    "brain-games": "bin/brain-games.js"
+    "brain-games": "bin/brain-games.js",
+    "brain-even": "bin/brain-even.js"
   },
   "type": "module",
   "author": "",
