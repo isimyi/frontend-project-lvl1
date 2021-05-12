@@ -7,3 +7,4 @@
 - [How to install package](https://asciinema.org/a/412786)
 - [Brain-even gameplay](https://asciinema.org/a/412790)
 - [Brain-calc gameplay](https://asciinema.org/a/412817)
+- [Brain-gcd gameplay](https://asciinema.org/a/413676)
