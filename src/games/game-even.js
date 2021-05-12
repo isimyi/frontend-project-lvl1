@@ -1,7 +1,7 @@
 import getRandomNumber from '../utils.js';
 
 const minNumber = 0;
-const maxNumber = 10000;
+const maxNumber = 1000;
 
 const isEven = (number) => number % 2 === 0;
 const setQuestion = (number) => `Question: ${number}`;
