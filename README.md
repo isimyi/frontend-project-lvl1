@@ -8,3 +8,4 @@
 - [Brain-even gameplay](https://asciinema.org/a/412790)
 - [Brain-calc gameplay](https://asciinema.org/a/412817)
 - [Brain-gcd gameplay](https://asciinema.org/a/413676)
+- [Brain-progression gameplay](https://asciinema.org/a/414861)
