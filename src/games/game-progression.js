@@ -3,7 +3,7 @@ import generateRandomNumber from '../utils.js';
 const generateProgression = () => {
   const progressionLength = generateRandomNumber(5, 10);
   const commonDifference = generateRandomNumber(2, 30);
-  const firstElement = generateRandomNumber(1, 10)
+  const firstElement = generateRandomNumber(1, 10);
   const hiddenElementPosition = generateRandomNumber(0, progressionLength - 1);
   const placeholder = '..';
   const progression = [firstElement];
