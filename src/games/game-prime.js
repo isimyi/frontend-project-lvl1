@@ -1,4 +1,4 @@
-import generateRandomNumber from "../utils.js";
+import generateRandomNumber from '../utils.js';
 
 const checkPrimeNumber = (number) => {
   const maxDivisor = Math.floor(Math.sqrt(number));
