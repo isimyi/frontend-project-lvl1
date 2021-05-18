@@ -1,4 +1,4 @@
-import getRandomNumber from '../utils.js';
+import generateRandomNumber from '../utils.js';
 
 const minNumber = 0;
 const maxNumber = 1000;
@@ -9,7 +9,7 @@ const getCorrectAnswer = (number) => (isEven(number) ? 'yes' : 'no');
 
 const setGameEvenData = () => {
   const gameRules = 'Answer "yes" if the number is even, otherwise answer "no"';
-  const generatedNumber = getRandomNumber(minNumber, maxNumber);
+  const generatedNumber = generateRandomNumber(minNumber, maxNumber);
   const question = setQuestion(generatedNumber);
   const correctAnswer = getCorrectAnswer(generatedNumber);
 
