@@ -7,9 +7,13 @@ const generateProgression = () => {
   const progressionLength = generateRandomNumber(5, 10);
   const commonDifference = generateRandomNumber(2, 30);
   const firstElement = generateRandomNumber(1, 10);
-  const progression = [firstElement];
+  const progression = [];
 
   for (let i = 0; i < progressionLength - 1; i += 1) {
+    if (progression.length === 0) {
+      progression.push(firstElement);
+    }
+
     const newElement = progression[i] + commonDifference;
     progression.push(newElement);
   }
