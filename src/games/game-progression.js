@@ -1,6 +1,8 @@
 import generateRandomNumber from '../utils.js';
 import playGame from '../index.js';
 
+const gameRules = 'What number is missing in the progression?';
+
 const generateProgression = () => {
   const progressionLength = generateRandomNumber(5, 10);
   const commonDifference = generateRandomNumber(2, 30);
@@ -28,15 +30,14 @@ const hideProgressionElement = (setProgression) => {
 };
 
 const setGameProgressionData = () => {
-  const gameRules = 'What number is missing in the progression?';
   const [progression, correctAnswer] = hideProgressionElement(generateProgression);
   const question = `Question: ${progression.join(' ')}`;
 
-  return [gameRules, question, correctAnswer];
+  return [question, correctAnswer];
 };
 
 const playGameProgression = () => {
-  playGame(setGameProgressionData);
+  playGame(gameRules, setGameProgressionData);
 };
 
 export default playGameProgression;

@@ -10,14 +10,13 @@ const getUserName = () => {
   return userName;
 };
 
-const playGame = (gameData) => {
+const playGame = (rules, gameData) => {
   let winsCount = 0;
   const userName = getUserName();
-  const [gameRules] = gameData();
-  console.log(gameRules);
+  console.log(rules);
 
   for (let i = 0; i < gameRounds; i += 1) {
-    const [, question, correctAnswer] = gameData();
+    const [question, correctAnswer] = gameData();
     console.log(question);
     const userAnswer = readlineSync.question('Your answer: ').toLowerCase();
 

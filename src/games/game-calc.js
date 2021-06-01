@@ -9,6 +9,7 @@ const mathOperations = [
   (arg1, arg2) => arg1 - arg2,
   (arg1, arg2) => arg1 * arg2,
 ];
+const gameRules = 'What is the result of the expression?';
 
 const generateExpression = () => {
   const arg1 = generateRandomNumber(minArgNumber, maxArgNumber);
@@ -23,15 +24,14 @@ const generateExpression = () => {
 };
 
 const setGameCalcData = () => {
-  const gameRules = 'What is the result of the expression?';
   const [expression, correctAnswer] = generateExpression();
   const question = `Question: ${expression}`;
 
-  return [gameRules, question, correctAnswer];
+  return [question, correctAnswer];
 };
 
 const playGameCalc = () => {
-  playGame(setGameCalcData);
+  playGame(gameRules, setGameCalcData);
 };
 
 export default playGameCalc;
