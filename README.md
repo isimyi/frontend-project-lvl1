@@ -43,7 +43,7 @@ brain-even
 [![asciicast](https://asciinema.org/a/412790.svg)](https://asciinema.org/a/412790)
 
 #### Brain Calc
-Calculate result of math operation
+Calculate result of math operation.
 
 To run the game, do
 ```
@@ -53,7 +53,7 @@ brain-calc
 [![asciicast](https://asciinema.org/a/412817.svg)](https://asciinema.org/a/412817)
 
 #### Brain GDC
-Find greatest common divisor
+Find greatest common divisor.
 
 To run the game, do 
 ```
@@ -62,7 +62,7 @@ brain-gcd
 [![asciicast](https://asciinema.org/a/413676.svg)](https://asciinema.org/a/413676)
 
 #### Brain Progression
-Find missing number in progression
+Find missing number in progression.
 
 To run the game, do
 ```
@@ -71,7 +71,7 @@ brain-progression
 [![asciicast](https://asciinema.org/a/414861.svg)](https://asciinema.org/a/414861)
 
 #### Brain Prime
-Detect if number is prime
+Detect if number is prime.
 
 To run the game, do
 ```
