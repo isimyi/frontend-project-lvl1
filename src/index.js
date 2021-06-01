@@ -11,27 +11,23 @@ const getUserName = () => {
 };
 
 const playGame = (rules, gameData) => {
-  let winsCount = 0;
   const userName = getUserName();
   console.log(rules);
 
   for (let i = 0; i < gameRounds; i += 1) {
     const [question, correctAnswer] = gameData();
     console.log(question);
-    const userAnswer = readlineSync.question('Your answer: ').toLowerCase();
+    const userAnswer = readlineSync.question('Your answer: ');
 
     if (userAnswer === correctAnswer) {
-      winsCount += 1;
       console.log('Correct!');
     } else {
       console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}".\nLet's try again, ${userName}!`);
-      break;
+      return;
     }
   }
 
-  if (winsCount === gameRounds) {
-    console.log(`Congratulations, ${userName}!`);
-  }
+  console.log(`Congratulations, ${userName}!`);
 };
 
 export default playGame;
