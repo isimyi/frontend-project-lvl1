@@ -1,4 +1,5 @@
 import generateRandomNumber from '../utils.js';
+import playGame from '../index.js';
 
 const checkPrimeNumber = (number) => {
   const maxDivisor = Math.floor(Math.sqrt(number));
@@ -23,4 +24,8 @@ const setGamePrimeData = () => {
   return [gameRules, question, correctAnswer];
 };
 
-export default setGamePrimeData;
+const playGamePrime = () => {
+  playGame(setGamePrimeData);
+};
+
+export default playGamePrime;

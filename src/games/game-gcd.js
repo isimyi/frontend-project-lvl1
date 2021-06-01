@@ -1,4 +1,5 @@
 import generateRandomNumber from '../utils.js';
+import playGame from '../index.js';
 
 const minNumber = 0;
 const maxNumber = 100;
@@ -23,4 +24,8 @@ const setGameGcdData = () => {
   return [gameRules, question, correctAnswer];
 };
 
-export default setGameGcdData;
+const playGameGcd = () => {
+  playGame(setGameGcdData);
+};
+
+export default playGameGcd;

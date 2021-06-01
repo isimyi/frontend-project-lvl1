@@ -1,4 +1,5 @@
 import generateRandomNumber from '../utils.js';
+import playGame from '../index.js';
 
 const minNumber = 0;
 const maxNumber = 1000;
@@ -16,4 +17,8 @@ const setGameEvenData = () => {
   return [gameRules, question, correctAnswer];
 };
 
-export default setGameEvenData;
+const playGameEven = () => {
+  playGame(setGameEvenData);
+};
+
+export default playGameEven;

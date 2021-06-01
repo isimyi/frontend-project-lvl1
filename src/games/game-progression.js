@@ -1,4 +1,5 @@
 import generateRandomNumber from '../utils.js';
+import playGame from '../index.js';
 
 const generateProgression = () => {
   const progressionLength = generateRandomNumber(5, 10);
@@ -27,4 +28,8 @@ const setGameProgressionData = () => {
   return [gameRules, question, correctAnswer];
 };
 
-export default setGameProgressionData;
+const playGameProgression = () => {
+  playGame(setGameProgressionData);
+};
+
+export default playGameProgression;
