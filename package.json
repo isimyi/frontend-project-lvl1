@@ -1,6 +1,7 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
+  "description": "Brain Games - 5 console math games",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,7 +19,7 @@
     "brain-prime": "bin/brain-prime.js"
   },
   "type": "module",
-  "author": "",
+  "author": "Kristina Kovach",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/isimyi/frontend-project-lvl1/issues"
