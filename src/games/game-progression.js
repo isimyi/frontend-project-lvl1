@@ -5,8 +5,6 @@ const generateProgression = () => {
   const progressionLength = generateRandomNumber(5, 10);
   const commonDifference = generateRandomNumber(2, 30);
   const firstElement = generateRandomNumber(1, 10);
-  const hiddenElementPosition = generateRandomNumber(0, progressionLength - 1);
-  const placeholder = '..';
   const progression = [firstElement];
 
   for (let i = 0; i < progressionLength - 1; i += 1) {
@@ -14,15 +12,24 @@ const generateProgression = () => {
     progression.push(newElement);
   }
 
-  const hiddenElement = progression[hiddenElementPosition].toString();
-  progression[hiddenElementPosition] = placeholder;
+  return progression;
+};
 
-  return [progression, hiddenElement];
+const hideProgressionElement = (setProgression) => {
+  const placeholder = '..';
+  const resultArr = setProgression();
+  const resultArrLength = resultArr.length;
+  const hiddenElementPosition = generateRandomNumber(0, resultArrLength - 1);
+  const hiddenElement = resultArr[hiddenElementPosition].toString();
+
+  resultArr[hiddenElementPosition] = placeholder;
+
+  return [resultArr, hiddenElement];
 };
 
 const setGameProgressionData = () => {
   const gameRules = 'What number is missing in the progression?';
-  const [progression, correctAnswer] = generateProgression();
+  const [progression, correctAnswer] = hideProgressionElement(generateProgression);
   const question = `Question: ${progression.join(' ')}`;
 
   return [gameRules, question, correctAnswer];
