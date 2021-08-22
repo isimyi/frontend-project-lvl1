@@ -23,14 +23,14 @@ const generateProgression = () => {
 
 const hideProgressionElement = (setProgression) => {
   const placeholder = '..';
-  const resultArr = setProgression();
-  const resultArrLength = resultArr.length;
-  const hiddenElementPosition = generateRandomNumber(0, resultArrLength - 1);
-  const hiddenElement = resultArr[hiddenElementPosition].toString();
+  const resultArray = setProgression();
+  const resultArrayLength = resultArray.length;
+  const hiddenElementPosition = generateRandomNumber(0, resultArrayLength - 1);
+  const hiddenElement = resultArray[hiddenElementPosition].toString();
 
-  resultArr[hiddenElementPosition] = placeholder;
+  resultArray[hiddenElementPosition] = placeholder;
 
-  return [resultArr, hiddenElement];
+  return [resultArray, hiddenElement];
 };
 
 const setGameProgressionData = () => {
