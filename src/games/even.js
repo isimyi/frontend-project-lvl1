@@ -6,15 +6,13 @@ const maxNumber = 1000;
 const gameRules = 'Answer "yes" if the number is even, otherwise answer "no"';
 
 const isEven = (number) => number % 2 === 0;
-const setQuestion = (number) => `Question: ${number}`;
 const getCorrectAnswer = (number) => (isEven(number) ? 'yes' : 'no');
 
 const setGameEvenData = () => {
   const generatedNumber = generateRandomNumber(minNumber, maxNumber);
-  const question = setQuestion(generatedNumber);
   const correctAnswer = getCorrectAnswer(generatedNumber);
 
-  return [question, correctAnswer];
+  return [generatedNumber, correctAnswer];
 };
 
 const playGameEven = () => {

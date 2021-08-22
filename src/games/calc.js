@@ -20,9 +20,7 @@ const setGameCalcData = () => {
 
   const expressionResult = calculateExpressionResult(operand1, operand2).toString();
 
-  const question = `Question: ${expression}`;
-
-  return [question, expressionResult];
+  return [expression, expressionResult];
 };
 
 const playGameCalc = () => {

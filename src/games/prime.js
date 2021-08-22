@@ -19,10 +19,9 @@ const getCorrectAnswer = (number) => (isPrime(number) ? 'yes' : 'no');
 
 const setGamePrimeData = () => {
   const number = generateRandomNumber(1, 100);
-  const question = `Question: ${number}`;
   const correctAnswer = getCorrectAnswer(number);
 
-  return [question, correctAnswer];
+  return [number, correctAnswer];
 };
 
 const playGamePrime = () => {

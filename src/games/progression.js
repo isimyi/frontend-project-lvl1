@@ -36,7 +36,7 @@ const setGameProgressionData = () => {
   const progression = generateProgression(firstMember, progressionLength, commonDifference);
   const hiddenElement = progression[hiddenElementIndex].toString();
   const hiddenItemProgression = hideProgressionElement(progression, hiddenElementIndex);
-  const question = `Question: ${hiddenItemProgression.join(' ')}`;
+  const question = hiddenItemProgression.join(' ');
 
   return [question, hiddenElement];
 };
