@@ -10,7 +10,7 @@ const mathOperations = [
   { '*': (operand1, operand2) => operand1 * operand2 },
 ];
 
-const setGameCalcData = () => {
+const generateGameCalcData = () => {
   const operand1 = generateRandomNumber(minOperandNumber, maxOperandNumber);
   const operand2 = generateRandomNumber(minOperandNumber, maxOperandNumber);
   const indexOfOperation = generateRandomNumber(0, mathOperations.length - 1);
@@ -24,7 +24,7 @@ const setGameCalcData = () => {
 };
 
 const playGameCalc = () => {
-  playGame(gameRules, setGameCalcData);
+  playGame(gameRules, generateGameCalcData);
 };
 
 export default playGameCalc;

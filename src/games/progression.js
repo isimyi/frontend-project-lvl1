@@ -27,7 +27,7 @@ const hideProgressionElement = (progression, index) => {
   return resultArray;
 };
 
-const setGameProgressionData = () => {
+const generateGameProgressionData = () => {
   const firstMember = generateRandomNumber(1, 10);
   const progressionLength = generateRandomNumber(5, 10);
   const commonDifference = generateRandomNumber(2, 30);
@@ -42,7 +42,7 @@ const setGameProgressionData = () => {
 };
 
 const playGameProgression = () => {
-  playGame(gameRules, setGameProgressionData);
+  playGame(gameRules, generateGameProgressionData);
 };
 
 export default playGameProgression;
