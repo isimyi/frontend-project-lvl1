@@ -21,24 +21,24 @@ const generateProgression = (startElement, length, step) => {
 const hideProgressionElement = (progression, index) => {
   const placeholder = '..';
   const resultArray = progression;
-  const hiddenElement = resultArray[index].toString();
 
   resultArray[index] = placeholder;
 
-  return [resultArray, hiddenElement];
+  return resultArray;
 };
 
 const setGameProgressionData = () => {
   const firstMember = generateRandomNumber(1, 10);
   const progressionLength = generateRandomNumber(5, 10);
   const commonDifference = generateRandomNumber(2, 30);
-  const hiddenElementPosition = generateRandomNumber(0, progressionLength - 1);
+  const hiddenElementIndex = generateRandomNumber(0, progressionLength - 1);
 
   const progression = generateProgression(firstMember, progressionLength, commonDifference);
-  const [hiddenItemProgression, correctAnswer] = hideProgressionElement(progression, hiddenElementPosition);
+  const hiddenElement = progression[hiddenElementIndex].toString();
+  const hiddenItemProgression = hideProgressionElement(progression, hiddenElementIndex);
   const question = `Question: ${hiddenItemProgression.join(' ')}`;
 
-  return [question, correctAnswer];
+  return [question, hiddenElement];
 };
 
 const playGameProgression = () => {
