@@ -11,23 +11,21 @@ const mathOperations = [
 ];
 const gameRules = 'What is the result of the expression?';
 
-const generateExpression = () => {
-  const arg1 = generateRandomNumber(minArgNumber, maxArgNumber);
-  const arg2 = generateRandomNumber(minArgNumber, maxArgNumber);
-  const indexOfOperation = generateRandomNumber(0, mathOperators.length - 1);
-  const operationSymbol = mathOperators[indexOfOperation];
-  const expression = `${arg1} ${operationSymbol} ${arg2}`;
-  const getExpressionResult = mathOperations[indexOfOperation];
-  const result = getExpressionResult(arg1, arg2).toString();
-
-  return [expression, result];
-};
+const generateExpression = (operand1, operand2, operationSymbol) => `${operand1} ${operationSymbol} ${operand2}`;
 
 const setGameCalcData = () => {
-  const [expression, correctAnswer] = generateExpression();
+  const operand1 = generateRandomNumber(minArgNumber, maxArgNumber);
+  const operand2 = generateRandomNumber(minArgNumber, maxArgNumber);
+  const indexOfOperation = generateRandomNumber(0, mathOperators.length - 1);
+  const operationSymbol = mathOperators[indexOfOperation];
+  const expression = generateExpression(operand1, operand2, operationSymbol);
+
+  const getExpressionResult = mathOperations[indexOfOperation];
+  const expressionResult = getExpressionResult(operand1, operand2).toString();
+
   const question = `Question: ${expression}`;
 
-  return [question, correctAnswer];
+  return [question, expressionResult];
 };
 
 const playGameCalc = () => {
